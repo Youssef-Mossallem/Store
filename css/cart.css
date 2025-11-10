@@ -1,0 +1,347 @@
+/* تنسيقات الـ body */
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(135deg, #f2f2f2, #e0e0e0);
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* تنسيقات الـ container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* تنسيقات الـ cart-container */
+.cart-container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 800px;
+  margin: 40px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #ffffff, #f7f7f7);
+  transition: transform 0.3s ease;
+}
+
+.cart-container:hover {
+  transform: scale(1.02);
+}
+
+/* عنوان السلة */
+.cart-header {
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #2c3e50;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+.cart-header:hover {
+  color: #3498db;
+}
+
+/* تنسيقات الـ cart-item */
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #fafafa;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.cart-item:hover {
+  transform: translateY(-5px);
+  background-color: #ecf0f1;
+}
+
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.cart-item-details {
+  flex-grow: 1;
+  padding-left: 20px;
+}
+
+.cart-item-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.cart-item-price {
+  font-size: 16px;
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+/* زر الإزالة من السلة */
+.remove-from-cart-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.remove-from-cart-btn:hover {
+  background-color: #c0392b;
+}
+
+/* تنسيقات الـ cart-footer */
+.cart-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.cart-total {
+  font-size: 22px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.checkout-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.checkout-btn:hover {
+  background-color: #2980b9;
+  transform: translateY(-3px);
+}
+
+/* إضافة انيميشن لتغيير اللون */
+.cart-footer:hover .checkout-btn {
+  transform: scale(1.05);
+}
+
+/* تنسيقات الـ header */
+header {
+  background: linear-gradient(to right, #3498db, #2980b9);
+  padding: 15px 0;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+/* تنسيقات الـ nav */
+.nav1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+}
+
+.nav1 ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav1 a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav1 a:hover {
+  color: #f1c40f;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* إضافة أيقونات باستخدام FontAwesome */
+.remove-from-cart-btn:before {
+  content: "\f00d"; /* رمز X من FontAwesome */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 8px;
+}
+
+/* media queries */
+
+/* شاشات صغيرة (الهاتف المحمول) */
+@media (max-width: 600px) {
+  .cart-container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .cart-header {
+    font-size: 22px;
+  }
+
+  .cart-item {
+    flex-direction: column;
+    padding: 12px;
+  }
+
+  .cart-item-name {
+    font-size: 16px;
+  }
+
+  .cart-item-price {
+    font-size: 14px;
+  }
+
+  .cart-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .checkout-btn {
+    width: 100%;
+    padding: 14px 0;
+    font-size: 18px;
+  }
+
+  .remove-from-cart-btn {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 18px;
+    margin-top: 15px;
+  }
+}
+
+/* شاشات متوسطة (التابلت) */
+@media (max-width: 768px) {
+  .cart-container {
+    width: 90%;
+    padding: 25px;
+  }
+
+  .cart-header {
+    font-size: 24px;
+  }
+
+  .cart-item {
+    padding: 14px;
+  }
+
+  .cart-item-name {
+    font-size: 17px;
+  }
+
+  .cart-item-price {
+    font-size: 15px;
+  }
+
+  .checkout-btn {
+    padding: 12px 20px;
+    font-size: 17px;
+  }
+
+  .remove-from-cart-btn {
+    font-size: 16px;
+  }
+}
+
+/* شاشات أكبر (اللاب توب أو الشاشات الكبيرة) */
+@media (min-width: 1024px) {
+  .cart-container {
+    width: 800px;
+    padding: 30px;
+  }
+
+  .cart-header {
+    font-size: 26px;
+  }
+
+  .cart-item {
+    padding: 15px;
+  }
+
+  .cart-item-name {
+    font-size: 18px;
+  }
+
+  .cart-item-price {
+    font-size: 16px;
+  }
+
+  .checkout-btn {
+    padding: 12px 24px;
+    font-size: 18px;
+  }
+}
+
+/* تنسيقات الأيقونات */
+i {
+  font-size: 20px;
+  margin-right: 8px; /* المسافة بين الأيقونة والنص */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* تأثيرات الأيقونات عند التمرير */
+i:hover {
+  transform: scale(1.1); /* تكبير الأيقونة عند التمرير */
+  color: #f39c12; /* تغيير اللون عند التمرير */
+}
+
+/* تنسيق الأيقونات داخل الأزرار */
+.remove-from-cart-btn i,
+.checkout-btn i {
+  font-size: 18px;
+  margin-right: 10px; /* المسافة بين الأيقونة والنص */
+}
+
+/* تنسيق الأيقونات داخل الروابط */
+.nav1 a i {
+  font-size: 20px;
+  margin-right: 8px;
+}
+
+/* تنسيق الأيقونات داخل القائمة المنسدلة */
+.nav-links li a i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+/* تأثير التمرير على الأيقونات في القائمة المنسدلة */
+.nav-links li a:hover i {
+  color: #f39c12; /* تغيير اللون عند التمرير */
+}

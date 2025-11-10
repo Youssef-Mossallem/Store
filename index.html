@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="description" content="Store">
+<meta name="keywords" content="متجر, إلكتروني, منتجات, شراء">
+<meta name="author" content="اسمك أو شركتك">
+<link rel="canonical" href="http://127.0.0.1:5500/index.html">
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Store</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="fontawesome-free-6.7.1-web/fontawesome-free-6.7.1-web/css/all.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="nav1">
+        <ul>
+          <li><a href="favourite.html">Favourite</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="brands.html">Catagory</a></li>
+        </ul>
+        <ul>
+          <li><a href="register.html">Register</a></li>
+          <li><a id="logoutBtn">Log Out</a></li>
+          <li><a href="profile.html">profile</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="selected-category-box" style="margin: 20px 0; display: none">
+      <span
+        id="selected-category-name"
+        style="font-weight: bold; color: #444"
+      ></span>
+      <button
+        id="delete-category-btn"
+        style="margin-left: 10px; padding: 5px 10px"
+      >
+        Delete Category
+      </button>
+    </div>
+    <section id="home" class="products">
+      <h2 class="section-title">Our Products</h2>
+      <div class="product-container"></div>
+    </section>
+    <div id="toast" class="toast">تمت الإضافة إلى السلة</div>
+    <script src="js/index.js" type="module"></script>
+  </body>
+</html>

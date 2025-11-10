@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up / Log In</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body class="signup">
+    <div class="container">
+      <div class="form-container" id="signupContainer">
+        <h1>Sign Up</h1>
+        <form id="signupForm">
+          <input
+            type="text"
+            id="username"
+            placeholder="Username"
+            required
+            autocomplete="name"
+          />
+          <input
+            type="email"
+            id="email"
+            placeholder="Email"
+            required
+            autocomplete="email"
+          />
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            required
+          />
+          <input
+            type="password"
+            id="repassword"
+            placeholder="Re-enter Password"
+            required
+          />
+          <input
+            type="text"
+            id="phone"
+            placeholder="Phone Number"
+            required
+          />
+          <p class="error-message" id="signupError">Invalid email or password</p>
+          <button type="submit">Sign Up</button>
+        </form>
+        <p id="toggleForm" class="toggle-link">
+          Already have an account? Log In
+        </p>
+      </div>
+
+      <div class="form-container" id="loginContainer">
+        <h1>Log In</h1>
+        <form id="loginForm">
+          <input
+            type="email"
+            id="loginEmail"
+            placeholder="Email"
+            required
+            autocomplete="email"
+          />
+          <input
+            type="password"
+            id="loginPassword"
+            placeholder="Password"
+            required
+          />
+          <p class="error-message" id="loginError">Invalid email or password</p>
+          <button type="submit">Log In</button>
+        </form>
+        <p id="toggleFormLogin" class="toggle-link">
+          Don't have an account? Sign Up
+        </p>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
